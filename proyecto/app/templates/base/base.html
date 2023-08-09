@@ -70,14 +70,20 @@
 
                         </ul>
                         {% comment %} ms-auto esta dejando al final el boton de login {% endcomment %}
-                        
-                        <a
-                        class="btn btn-outline-light btn-floating m-1 ms-auto"
-                        class="text-white"
-                        role="button"
-                        href="#"
-                        >Login</a>
-                     
+                        <div class="ms-auto">
+                            <a
+                            class="btn btn-outline-light btn-floating m-1"
+                            class="text-white"
+                            role="button"
+                            href="#"
+                            >Login</a>
+                            <a
+                            class="btn btn-outline-light btn-floating m-1"
+                            class="text-white"
+                            role="button"
+                            href="{% url 'registroUsuario' %}"
+                            >Registro</a>
+                        </div>
                     </div>
 
                     

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base/base.html' %}
 {% load static %}
 
 {% block title %}Index{% endblock %}
@@ -77,13 +77,21 @@
 
             <!-- formulario de contacto -->
             <form action="" class="formulario">
+                {% csrf_token %}
                 <h3 class="formulario__titulo">Contáctenos</h3>
-                <input type="text" class="formulario__input">
-                <label for="" class="formulario__label">Nombres</label>
-                <input type="text" class="formulario__input">
-                <label for="" class="formulario__label">Correo</label>
-                <input type="text" class="formulario__input">
-                <label for="" class="formulario__label">Mensaje</label>
+                <div class="form-group">
+                    <input type="text" class="formulario__input" id="nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="formulario__input" id="correo">
+                    <label for="correo" class="formulario__label">Correo</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="formulario__input" id="mensaje">
+                    <label for="mensaje" class="formulario__label">Mensaje</label>
+                </div>
                 
                 <div class="form-check d-flex justify-content-center mt-3">
                     <input class="form-check-input me-2 " type="checkbox" value="" id="form2Example33" checked />
